@@ -20,10 +20,12 @@ public:
         return age;
     }
 
-    //// Overloading the equality operator (==)
-    //bool operator==(const Person& other) const {
-    //    return (name == other.name && age == other.age);
-    //}
+    // Overloading the equality operator (==)
+    // When should overloads be member functions?
+    //  << is not a member function
+    bool operator==(const Person& other) const {
+        return (name == other.name && age == other.age);
+    }
 };
 
 int main() {
